@@ -39,7 +39,7 @@ def GetPbId(driver) :
 
 driverFirefox = webdriver.Firefox(executable_path=r"C:\Users\jmogo\AppData\Local\Temp\Temp1_geckodriver-v0.28.0-win64.zip\geckodriver.exe")
 driverFirefox.get("https://www.pbinfo.ro/")
-LogIn(driverFirefox, "500_IQ", "exemplu1")
+LogIn(driverFirefox, "500", "exemplu")
 
 driverChrome = webdriver.Firefox(executable_path=r"C:\Users\jmogo\AppData\Local\Temp\Temp1_geckodriver-v0.28.0-win64.zip\geckodriver.exe")
 driverChrome.get(UrlZeceLaInfo)
@@ -56,7 +56,7 @@ for NrOfProblem in range (1, 4001) :
     PbId = GetPbId(driverChrome) #am aflat id pb
 
     UrlSolOf = "https://www.pbinfo.ro/?pagina=solutie-oficiala&id=" + str(PbId)
-    driverFirefox.get(UrlSolOf) #intru cont 300 iq
+    driverFirefox.get(UrlSolOf) #intru cont
 
     if "numai de utilizatorii" in driverFirefox.page_source: #daca nu am pb
         copiedText = driverChrome.find_element_by_css_selector(".wp-block-preformatted").text
