@@ -33,7 +33,7 @@ def GetPbId(driver) :
 
 driverFirefox = webdriver.Firefox(executable_path=r"C:\Users\jmogo\AppData\Local\Temp\Temp1_geckodriver-v0.28.0-win64.zip\geckodriver.exe")
 driverFirefox.get("https://www.pbinfo.ro/")
-LogIn(driverFirefox, "500_IQ", "exemplu1")
+LogIn(driverFirefox, "IQ", "IQ")
 
 driverChrome = webdriver.Firefox(executable_path=r"C:\Users\jmogo\AppData\Local\Temp\Temp1_geckodriver-v0.28.0-win64.zip\geckodriver.exe")
 driverChrome.get(UrlZeceLaInfo)
